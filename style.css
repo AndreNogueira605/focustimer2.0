@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color:  hsla(240, 6%, 21%, 1);
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+}
+svg path{
+  color: black;
+}
+.dark{
+  background: black;
+}
+.dark #config{
+  color: white;
+}
+.dark #music button{
+  background: #29292E;
+}
+.dark #music .show{
+  background: #0A3442;
+}
+.dark svg path{
+  fill: white
+}
+.dark #music input[type="range"]{
+  background: white;
+  }
+.dark #music input[type="range"]::-webkit-slider-thumb{
+    background: white;
+}
+header{
+ align-self: flex-start;
+ justify-self: flex-end;
+ padding: 6.4rem 6.4rem 0 0;
+ cursor: pointer;
+}
+.hide {
+  display: none;
+}
+main{
+  gap: 8rem;
+  align-items: ;
+  align-self: flex-start;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#config span{
+  font-size: 12.617rem;
+  line-height: 14.785rem;
+}
+#config .timer{
+  display: flex;
+  gap: 0;
+}
+#config {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+#config .controls{
+  display: flex;
+  gap: 4rem;
+}
+#config  button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+#config  button:hover{
+  animation: pulse 1s;
+  animation-fill-mode: forwards;
+  
+}
+
+#music{
+  display: grid;
+  grid-template-areas:'A B'
+  'C D' ;
+
+  gap: clamp(.1rem, 1rem + 5vw, 3.2rem);
+}
+#music button{
+border: none;
+width: 13.8rem;
+width: 13.8rem;
+height: 15.2rem;
+border-radius: 24px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 3.2rem;
+}
+input[type="range"]{
+  -webkit-appearance: none;
+  width: 9rem;
+  height: .4rem;
+  outline: none;
+  border-radius: 8px;
+  background-color: #323238; 
+  
+}
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #323238;
+  border-radius: 100%;
+
+}
+#music .show input[type="range"]{
+  background: white;
+}
+#music .show input[type="range"]::-webkit-slider-thumb{
+  background: white;
+}
+
+#music .show{
+  background: #02799D;
+}
+.show svg path{
+  fill: white
+}
+
+#music button:hover{
+  animation: pulse 1s;
+  animation-fill-mode: forwards;
+  }
+
+
+  @keyframes pulse{
+    100%{transform: scale(1.1);
+      opacity: 1.1;
+      filter: brightness(1) saturate(1.5);}
+  }
+  @media (min-width: 840px){
+    header{
+      justify-self: flex-end;
+    }
+    main{
+      gap: 19.2rem;
+      align-items: center;
+      align-self: flex-start;
+      justify-self: center;
+      display: grid;
+      grid-template-areas: 'A B';
+    }
+  
+  }
